@@ -1,0 +1,36 @@
+<html>
+<head>
+<!-- Make buttons look pretty -->
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  height: 25%;
+}
+</style>
+</head>
+<body>
+	<h1 align="center" style="font-size: 50px; font-family: Helvetica;">Traffic Light Control System</h2>
+	<!-- Submit form via POST on button click -->
+	<form id="colour-form" action="https://api.particle.io/v1/devices/e00fce6807deccb3d8d5d991/led" method="post" target="form-results">
+		<input type="hidden" name="access_token" value="83792cec341aba9b295b432c561b22e791f5c249" />
+		<button style="background-color: #f44336;" name="colour" type="submit" value="red" class="button">Red</button>
+		<br/>
+		<button style="background-color: #008CBA;" name="colour" type="submit" value="blue" class="button">Blue</button>
+		<br/>
+		<button style="background-color: #4CAF50;" name="colour" type="submit" value="green" class="button">Green</button>
+	</form>
+
+	<iframe style="width: 100%; height: 10%;" name="form-results"></iframe>
+</body>
+</html>
